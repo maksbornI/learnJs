@@ -43,37 +43,7 @@
 		showPlayerProgress(www);
 		alert (`Отлично ${usersname}, ты справился! Слово ${word} угадано!`)
 		}
-		let drawPoint = function (incorrectGuesses) {
-			ctx.lineWidth = 8
-			if(incorrectGuesses ===0) {
-				ctx.strokeRect(50,50,50,50);
-			} else if (incorrectGuesses ===1) {
-				ctx.beginPath();
-				ctx.moveTo(75,100);
-				ctx.lineTo(75,200);
-				ctx.stroke();
-			} else if (incorrectGuesses ===2) {
-				ctx.beginPath();
-				ctx.moveTo(75,200);
-				ctx.lineTo(25,300);
-				ctx.stroke();
-			} else if (incorrectGuesses ===3) {
-				ctx.beginPath();
-				ctx.moveTo(75,200);
-				ctx.lineTo(125,300);
-				ctx.stroke();
-			} else if (incorrectGuesses ===4) {
-				ctx.beginPath();
-				ctx.moveTo(75,125);
-				ctx.lineTo(15,100);
-				ctx.stroke();
-			} else if (incorrectGuesses ===5) {
-				ctx.beginPath();
-				ctx.moveTo(75,125);
-				ctx.lineTo(135,100)
-			}
-			
-			};
+		
 		while (remainingLetters>0&&incorrectGuesses<6) {
 	 		showPlayerProgress(answerArray)
 	   		let guess = getGuess()

@@ -129,3 +129,34 @@ function cc(card) {
 }
 
 cc(2); cc(3); cc(7); cc('K'); cc('A');
+// codewars "Vowel Count"
+function getCount(str) {
+  let count = 0;
+  for (let i = 0; i<str.length; i++) {
+    if (str[i]=="a"||str[i]=="e"||str[i]=="i"||str[i]=="o"||str[i]=="u" ) {
+      count++
+    }
+  }
+  return count;
+}
+// codewars "Complementary DNA"
+function DNAStrand(dna){
+  let newDna =[]
+  for (let i = 0; i<dna.length;i++) {
+    if (dna[i]=="A") {
+      newDna+="T";
+      
+      
+    } else if (dna[i]=="T") {
+      newDna+="A";
+      
+    } else if (dna[i]==="C") {
+      newDna+="G";
+     
+    } else if (dna[i]=="G") {
+      newDna+="C";newDna
+    
+    } else {nawDna+=dna[i]}
+    
+    
+    } return newDna
