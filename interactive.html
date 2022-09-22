@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Интерактивное программирование</title>
+</head>
+
+<body>
+    <h1 id="heading">ПОЙМАЙ МЕНЯ!</h1>
+
+    <script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+
+    <script>
+    var direction = 'вправо';
+    var offset = 1;
+
+    $("#heading").offset({ left: offset, top: offset });
+
+    var moveHeading = function () {
+      if (direction === 'вправо') {
+        $("#heading").offset({ left: offset });
+        offset++;
+        if (offset > 200) {
+          offset = 0;
+          direction = 'вниз';
+        }
+      } else if (direction === 'вниз') {
+        $("#heading").offset({ top: offset });
+        offset++;
+        if (offset > 200) {
+          offset = 200;
+          direction = 'влево';
+        }
+      } else if (direction === 'влево') {
+        $("#heading").offset({ left: offset });
+        offset--;
+        if (offset < 0) {
+          offset = 200;
+          direction = 'вверх';
+        }
+      } else if (direction === 'вверх') {
+        $("#heading").offset({ top: offset });
+        offset--;
+        if (offset < 0) {
+          offset = 0;
+          direction = 'вправо';
+        }
+      }
+    };
+    setInterval(moveHeading, 10)
+    //let interValid = setInterval(moveHeading, 30)
+    //$("#heading").click(function(){
+    //	clearInterval(interValid)
+   // })
+   let duble = function () {offset+=5}
+   $("#heading").click(duble)
+    </script>
+</body>
+</html>
