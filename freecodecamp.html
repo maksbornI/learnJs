@@ -238,3 +238,35 @@ function rangeOfNumbers(startNum, endNum) {
         return numbers;
     }
 }
+//ES6 started
+function checkScope() {
+  let i = 'function scope';
+  if (true) {
+    let i = 'block scope';
+    console.log('Block scope i is: ', i);
+  }
+  console.log('Function scope i is: ', i);
+  return i;
+}
+//OBJECT__FREEZ
+function freezeObj() {
+  const MATH_CONSTANTS = {
+    PI: 3.14
+  };
+  // Only change code below this line
+Object.freeze(MATH_CONSTANTS)
+
+  // Only change code above this line
+  try {
+    MATH_CONSTANTS.PI = 99;
+  } catch(ex) {
+    console.log(ex);
+  }
+  return MATH_CONSTANTS.PI;
+}
+const PI = freezeObj();
+// REDUCE!!!!
+// "а" это "тотал", а "b" переибрает массив. Дальше можно вписывать адрес где пребирать через запятую.
+const sum = (...args) => {
+  return args.reduce((a, b) => a + b, 0);
+}
