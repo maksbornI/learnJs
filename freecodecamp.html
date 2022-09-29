@@ -306,3 +306,55 @@ const stats = {
 // Only change code below this line
 const half = ({max,min}) => (max + min) / 2.0; 
 // Only change code above this line
+
+
+// 	TEMPLATE LITERALS
+const result = {
+  success: ["max-length", "no-amd", "prefer-arrow-functions"],
+  failure: ["no-var", "var-on-top", "linebreak"],
+  skipped: ["no-extra-semi", "no-dup-keys"]
+};
+function makeList(arr) {
+  // Only change code below this line
+  const failureItems = [];
+  for (let i = 0;i<arr.length;i++) {
+    failureItems.push(`<li class="text-warning">${arr[i]}</li>`)
+  }
+  
+  ;
+  // Only change code above this line
+
+  return failureItems;
+}
+
+const failuresList = makeList(result.failure);
+//codewars
+var countBits = function(n) {
+  //if (n===0) {return 0} else{
+  let binary = (n).toString(2).split('');
+  
+  let sum = binary.reduce((total,num)=>  total + Number(num),0)
+  //} 
+  return sum;
+};
+// ES6
+// Only change code below this line
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {return this.gear = newGear;
+  }
+};
+// Only change code above this line
+bicycle.setGear(3);
+console.log(bicycle.gear);
+// constructor
+// Only change code below this line
+class Vegetable {
+  constructor (name) {
+    this.name=name
+  }
+}
+// Only change code above this line
+
+const carrot = new Vegetable('carrot');
+console.log(carrot.name); // Should display 'carrot'
